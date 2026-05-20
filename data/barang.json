@@ -1,0 +1,38 @@
+[
+    {
+        "jenis": "BahanBaku",
+        "kode_barang": "BB001",
+        "nama": "Biji Kopi Arabica",
+        "stok": 10,
+        "harga_beli": 120000.0,
+        "satuan": "kg",
+        "tanggal_kedaluwarsa": "2026-12-30"
+    },
+    {
+        "jenis": "ProdukJadi",
+        "kode_barang": "PJ001",
+        "nama": "Cold Brew Bottle",
+        "stok": 25,
+        "harga_beli": 12000.0,
+        "kategori_produk": "Minuman Botol",
+        "harga_jual": 22000.0
+    },
+    {
+        "jenis": "PeralatanCafe",
+        "kode_barang": "PC001",
+        "nama": "Grinder Manual",
+        "stok": 2,
+        "harga_beli": 350000.0,
+        "kondisi": "Baik",
+        "tahun_pembelian": 2025
+    },
+    {
+        "jenis": "BarangKemasan",
+        "kode_barang": "BK001",
+        "nama": "Paper Cup 12 oz",
+        "stok": 100,
+        "harga_beli": 800.0,
+        "ukuran": "12 oz",
+        "bahan_kemasan": "Kertas"
+    }
+]
