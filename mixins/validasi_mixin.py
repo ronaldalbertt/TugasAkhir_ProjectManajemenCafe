@@ -48,3 +48,14 @@ class ValidasiMixin:
             raise ValueError("Format tanggal harus YYYY-MM-DD.")
 
         return tanggal
+
+    def validasi_kode_prefix(self, kode_barang, prefix, nama_jenis):
+        kode_barang = self.validasi_teks(kode_barang, "Kode barang")
+
+        if not kode_barang.upper().startswith(prefix):
+            raise ValueError(
+                f"Kode untuk {nama_jenis} harus diawali dengan '{prefix}'. "
+                f"Contoh: {prefix}001"
+            )
+
+        return kode_barang.upper()

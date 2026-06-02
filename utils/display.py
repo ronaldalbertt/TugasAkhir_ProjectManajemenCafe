@@ -13,8 +13,8 @@ class DisplayHelper:
     @staticmethod
     def tampilkan_header():
         print("╔══════════════════════════════════════════════╗")
-        print("║        TIF CAFE INVENTORY SYSTEM            ║")
-        print("║        Sistem Inventaris Cafe               ║")
+        print("║        TIF CAFE INVENTORY SYSTEM             ║")
+        print("║          Sistem Inventaris Cafe              ║")
         print("╚══════════════════════════════════════════════╝")
 
     @staticmethod
@@ -83,3 +83,26 @@ class DisplayHelper:
 
         for barang in daftar_barang:
             DisplayHelper.tampilkan_detail_barang(barang)
+
+    @staticmethod
+    def tampilkan_tabel_ringkas(daftar_barang):
+        if len(daftar_barang) == 0:
+            print("\nBelum ada data barang.")
+            return
+
+        print("\n+------------+--------------------------+----------------+-------+---------------+")
+        print("| Kode       | Nama Barang              | Jenis          | Stok  | Harga Beli    |")
+        print("+------------+--------------------------+----------------+-------+---------------+")
+
+        for barang in daftar_barang:
+            kode = barang.get_kode_barang()
+            nama = barang.get_nama()
+            jenis = barang.__class__.__name__
+            stok = str(barang.get_stok())
+            harga = f"Rp{barang.get_harga_beli():,.0f}"
+
+            print(
+                f"| {kode:<10} | {nama[:24]:<24} | {jenis[:14]:<14} | {stok:<5} | {harga:<13} |"
+            )
+
+        print("+------------+--------------------------+----------------+-------+---------------+")

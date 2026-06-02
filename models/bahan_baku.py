@@ -6,6 +6,7 @@ class BahanBaku(Barang):
 
 
     def __init__(self, kode_barang, nama, stok, harga_beli, satuan, tanggal_kedaluwarsa):
+        kode_barang = self.validasi_kode_prefix(kode_barang, "BB", "Bahan Baku")
         super().__init__(kode_barang, nama, stok, harga_beli)
         self.__satuan = self.validasi_teks(satuan, "Satuan")
         self.__tanggal_kedaluwarsa = self.validasi_tanggal(tanggal_kedaluwarsa)

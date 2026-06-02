@@ -111,7 +111,7 @@ def tampilkan_semua_barang():
     DisplayHelper.clear_screen()
     DisplayHelper.tampilkan_header()
     print("\nDAFTAR SEMUA BARANG")
-    DisplayHelper.tampilkan_daftar_barang(manajemen.tampilkan_semua_barang())
+    DisplayHelper.tampilkan_tabel_ringkas(manajemen.tampilkan_semua_barang())
     DisplayHelper.pause()
 
 
@@ -279,6 +279,21 @@ def hapus_barang():
     DisplayHelper.tampilkan_header()
 
     kode = input("Masukkan kode barang yang ingin dihapus: ")
+    barang = manajemen.cari_barang_by_kode(kode)
+
+    if barang is None:
+        DisplayHelper.tampilkan_pesan_error("Barang tidak ditemukan.")
+        DisplayHelper.pause()
+        return
+
+    DisplayHelper.tampilkan_detail_barang(barang)
+
+    konfirmasi = input("Apakah yakin ingin menghapus barang ini? (y/n): ")
+
+    if konfirmasi.lower() != "y":
+        DisplayHelper.tampilkan_pesan_error("Penghapusan dibatalkan.")
+        DisplayHelper.pause()
+        return
 
     try:
         manajemen.hapus_barang(kode)

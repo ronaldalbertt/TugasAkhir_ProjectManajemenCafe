@@ -8,6 +8,7 @@ class PeralatanCafe(Barang):
     DAFTAR_KONDISI = ["Baik", "Rusak Ringan", "Rusak Berat"]
 
     def __init__(self, kode_barang, nama, stok, harga_beli, kondisi, tahun_pembelian):
+        kode_barang = self.validasi_kode_prefix(kode_barang, "PC", "Peralatan Cafe")
         super().__init__(kode_barang, nama, stok, harga_beli)
         self.__kondisi = self.__validasi_kondisi(kondisi)
         self.__tahun_pembelian = self.validasi_tahun(tahun_pembelian)

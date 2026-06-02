@@ -34,5 +34,23 @@
         "harga_beli": 800.0,
         "ukuran": "12 oz",
         "bahan_kemasan": "Kertas"
+    },
+    {
+        "jenis": "BahanBaku",
+        "kode_barang": "BB003",
+        "nama": "Arabica",
+        "stok": 20,
+        "harga_beli": 53.0,
+        "satuan": "12.000",
+        "tanggal_kedaluwarsa": "2026-12-2"
+    },
+    {
+        "jenis": "ProdukJadi",
+        "kode_barang": "PJ999",
+        "nama": "EKSPRESO",
+        "stok": 2,
+        "harga_beli": 50.0,
+        "kategori_produk": "KOPI",
+        "harga_jual": 80.0
     }
 ]

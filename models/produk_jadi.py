@@ -6,6 +6,7 @@ class ProdukJadi(Barang):
 
 
     def __init__(self, kode_barang, nama, stok, harga_beli, kategori_produk, harga_jual):
+        kode_barang = self.validasi_kode_prefix(kode_barang, "PJ", "Produk Jadi")
         super().__init__(kode_barang, nama, stok, harga_beli)
         self.__kategori_produk = self.validasi_teks(kategori_produk, "Kategori produk")
         self.__harga_jual = self.validasi_angka_positif(harga_jual, "Harga jual")
@@ -55,3 +56,11 @@ class ProdukJadi(Barang):
             "harga_jual": self.__harga_jual
         })
         return data
+
+    def set_harga_beli(self, harga_beli_baru):
+        harga_beli_baru = self.validasi_angka_positif(harga_beli_baru, "Harga beli")
+
+        if self.__harga_jual <= harga_beli_baru:
+            raise ValueError("Harga beli tidak boleh lebih besar atau sama dengan harga jual.")
+
+        super().set_harga_beli(harga_beli_baru)
