@@ -2,9 +2,8 @@ import os
 
 
 class DisplayHelper:
-    """
-    Helper class untuk mengatur tampilan CLI agar lebih rapi.
-    """
+    #Helper class untuk mengatur tampilan CLI agar lebih rapi.
+
 
     @staticmethod
     def clear_screen():

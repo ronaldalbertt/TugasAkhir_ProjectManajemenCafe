@@ -8,7 +8,6 @@ from models.barang_kemasan import BarangKemasan
 
 
 class JsonStorage:
-
     # Class untuk mengatur penyimpanan dan pembacaan data barang   menggunakan file JSON.
 
 

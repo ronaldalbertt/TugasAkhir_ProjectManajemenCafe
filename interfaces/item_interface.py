@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 
-
 class ItemInterface(ABC):
 
     @abstractmethod
@@ -9,6 +8,7 @@ class ItemInterface(ABC):
 
     @abstractmethod
     def hitung_nilai_stok(self):
+        
         pass
 
     @abstractmethod
