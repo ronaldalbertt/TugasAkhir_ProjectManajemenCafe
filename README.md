@@ -19,7 +19,7 @@ Project ini dibuat sebagai tugas akhir mata kuliah **Proyek Akhir 1 - Membangun 
 
 TIF Cafe Inventory System berfokus pada pengelolaan data barang di lingkungan cafe. Barang yang dikelola tidak hanya berupa bahan baku, tetapi juga produk jadi, peralatan cafe, dan barang kemasan.
 
-Aplikasi ini tidak dibuat sebagai sistem kasir atau transaksi penjualan, melainkan sebagai sistem inventaris yang berfokus pada pengelolaan data barang dan penerapan konsep OOP secara jelas.
+Aplikasi ini tidak dibuat sebagai sistem kasir atau transaksi penjualan, melainkan sebagai sistem inventaris yang berfokus pada pengelolaan data barang.
 
 ---
 
